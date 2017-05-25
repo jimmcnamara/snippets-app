@@ -1,4 +1,6 @@
 import logging
+import argparse
+
 
 logging.basicConfig(filename="snippets.log", level=logging.DEBUG)
 
@@ -20,3 +22,14 @@ def get(name):
     """
     logging.error("FIXME: Unimplemented - get({!r})".format(name))
     return ""
+
+def main():
+	"""Main function"""
+	logging.info('constructing parser')
+	parser = argparse.ArgumentParser(description="Store and Retrieve snippets")
+	arguments = parser.parse_args()
+
+
+if __name__=="__main__":
+	main()
+	
